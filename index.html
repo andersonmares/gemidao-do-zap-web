@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site do Gemidão</title>
+    <meta charset="UTF-8">
+    <script src="js/gemidao.js"></script>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+<body id="page-top" class="index">
+
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+<!-- Navigation -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <a class="navbar-brand" href="#page-top">Gemidão do ZAP</a>
+        </div>
+
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- Header -->
+<header>
+    <div class="container" id="maincontent" tabindex="-1">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive"
+                     src="https://user-images.githubusercontent.com/1585655/29083653-d40bb660-7c3f-11e7-896c-efd243f32918.jpg"
+                     alt="">
+                <div class="intro-text">
+                    <h1 class="name">O que é isso?</h1>
+                    <hr class="star-light">
+                    <span class="skills">O <b>Gemidão do Zap</b> é uma aplicação escrita sobre HTML e Javascript que permite que você envie o gemidão do zap para seus amigos via chamada telefônica e simulando o número telefônico de pessoas conhecidas.</span>
+                    <br/><br/>
+                    <span class="skills">Por exemplo, eu posso enviar o gemidão do zap para meu amigo simulando uma ligação da mãe dele e, quando ele atender, AAAWN OOOWN NHAAA AWWWWN AAAAAH.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                <h2>Primeiro passo - Obtendo a chave </h2>
+                <p> Crie uma conta nesse site
+                    <a href="http://www.totalvoice.com.br/">http://www.totalvoice.com.br/</a>
+                    (não custa nada) <br/> Depois acesse esse link ->
+                    <a href="https://api2.totalvoice.com.br/painel/">https://api2.totalvoice.com.br/painel/</a>
+                    e copie seu Access-Token
+                </p>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-lg-12">
+
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                <form name="sentMessage" id="contactForm" novalidate>
+
+                    <h2>SEGUNDO PASSO - Escolhendo as vítimas</h2>
+                    <p>
+                        Insira o número do telefone de quem vai receber a ligação:
+                        <br/>
+                        <b>(Formato DDD + Número exemplo: 4832830151)</b>
+                    </p>
+
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="B">Número do Destinatário</label>
+                            <input type="fone" class="form-control" placeholder="Insira o número do destinatário"
+                                   id="B" required
+                                   data-validation-required-message="">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+
+
+                    <p style="margin-top: 20px;">
+                        Agora insira o número do telefone de quem vai enviar a ligação (pra ninguém saber que foi você):
+                        <br/>
+                        <b>(Formato DDD + Número exemplo: 4832830151)</b>
+                    </p>
+
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="A">Número do Remetente</label>
+                            <input type="tel" class="form-control" placeholder="Insira o número do remetente"
+                                   id="A" required
+                                   data-validation-required-message="">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+
+
+                    <p style="margin-top: 20px;">
+                        Por fim, insira o Access-Token que você coseguiu no primeiro passo :
+                    </p>
+
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="Key">Access-Token</label>
+                            <input type="tel" class="form-control" placeholder="Insira o número do Access-Token"
+                                   id="Key" required
+                                   data-validation-required-message="">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <p style="margin-top: 20px;">
+                                Agora é so clicar no botão abaixo e esperar a pessoa ficar brava :)
+                            </p>
+                            <button type="button" class="btn btn-success btn-lg" onclick="enviar()">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Este site é inspirado na idéia do <a TARGET="_blank" href="https://github.com/haskellcamargo/gemidao-do-zap">Marcelo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Contact Form JavaScript -->
+<script src="js/jqBootstrapValidation.js"></script>
+<script src="js/contact_me.js"></script>
+
+<!-- Theme JavaScript -->
+<script src="js/freelancer.min.js"></script>
+</body>
+</html>
