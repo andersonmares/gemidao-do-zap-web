@@ -2,7 +2,7 @@ Bem vindos,
 
 este é o código do site gemidao do zap web, sintam se a vontade para utilizar o código (ele é bem simples) como quiser. 
 
-Para utilizar acessse, https://wandersonmax.github.io/gemidao-do-zap-web lá tem todas as instruções de uso. 
+Para utilizar acesse, https://wandersonmax.github.io/gemidao-do-zap-web, lá tem todas as instruções de uso. 
 
 Esse projeto foi inspirado na ideia do https://github.com/haskellcamargo/gemidao-do-zap  e https://github.com/Supitto/Gemidao-Web.
 
